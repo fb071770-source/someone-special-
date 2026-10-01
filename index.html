@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> KING HASSAN 🔥👑</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Permanent+Marker&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    min-height:100vh;
+    background:
+      repeating-linear-gradient(135deg, rgba(255,255,255,.015) 0px, rgba(255,255,255,.015) 2px, transparent 2px, transparent 6px),
+      radial-gradient(circle at 20% 10%, #16181c 0%, transparent 45%),
+      radial-gradient(circle at 85% 25%, #1a1410 0%, transparent 40%),
+      radial-gradient(circle at 70% 90%, #10151a 0%, transparent 45%),
+      linear-gradient(160deg, #0a0a0a 0%, #060607 50%, #000000 100%);
+    color:#f5f5f5;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* spray paint texture */
+  .spray{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;}
+  .spray::before{
+    content:'';
+    position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(57,255,20,.12), transparent 30%),
+      radial-gradient(circle at 85% 15%, rgba(255,20,60,.12), transparent 32%),
+      radial-gradient(circle at 75% 80%, rgba(255,200,0,.1), transparent 35%),
+      radial-gradient(circle at 20% 85%, rgba(57,255,20,.08), transparent 30%);
+  }
+  .noise-line{
+    position:fixed;left:0;right:0;height:2px;
+    background:repeating-linear-gradient(90deg,#39ff14 0 20px,transparent 20px 40px);
+    opacity:.15;z-index:0;
+  }
+
+  section{
+    position:relative;z-index:1;
+    min-height:100vh;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    text-align:center;
+    padding:60px 22px;
+  }
+
+  /* ---------- HERO ---------- */
+  .tag{
+    font-family:'Permanent Marker',cursive;
+    font-size:.95rem;
+    color:#39ff14;
+    letter-spacing:.08em;
+    margin-bottom:18px;
+    text-shadow:0 0 10px rgba(57,255,20,.6);
+    transform:rotate(-2deg);
+  }
+  h1{
+    font-family:'Bungee',cursive;
+    font-size:clamp(2.6rem,11vw,5rem);
+    line-height:1.05;
+    color:#fff;
+    text-shadow:
+      3px 3px 0 #ff1744,
+      6px 6px 0 #39ff14,
+      0 0 30px rgba(255,255,255,.2);
+    letter-spacing:.02em;
+  }
+  h1 span{display:block;color:#ffd700;text-shadow:3px 3px 0 #000, 0 0 20px rgba(255,215,0,.6);}
+  .crown{
+    font-size:2.4rem;
+    margin-bottom:10px;
+    filter:drop-shadow(0 0 14px rgba(255,215,0,.6));
+    animation:sway 2.4s ease-in-out infinite;
+  }
+  @keyframes sway{0%,100%{transform:rotate(-4deg);}50%{transform:rotate(4deg);}}
+  .hero-sub{
+    margin-top:22px;
+    font-size:.95rem;
+    color:#ccc;
+    max-width:420px;
+    line-height:1.8;
+  }
+  .chain-row{
+    margin-top:30px;
+    font-size:1.6rem;
+    letter-spacing:10px;
+    opacity:.85;
+  }
+  .scroll-cue{
+    margin-top:50px;
+    font-family:'Permanent Marker',cursive;
+    font-size:.8rem;
+    color:#39ff14;
+    opacity:.75;
+    animation:bob 2s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+
+  /* flame particles */
+  .flames{position:absolute;bottom:0;left:0;right:0;height:120px;pointer-events:none;overflow:hidden;}
+  .flame-p{
+    position:absolute;bottom:-20px;
+    font-size:1.4rem;
+    animation:riseFlame linear infinite;
+    opacity:.8;
+  }
+  @keyframes riseFlame{
+    0%{transform:translateY(0) scale(.8);opacity:.9;}
+    100%{transform:translateY(-160px) scale(1.3);opacity:0;}
+  }
+
+  /* ---------- VAULT ---------- */
+  .vault-heading{
+    font-family:'Bungee',cursive;
+    font-size:clamp(1.5rem,4.5vw,2.1rem);
+    color:#fff;
+    text-shadow:2px 2px 0 #ff1744;
+    margin-bottom:12px;
+  }
+  .vault-note{
+    font-size:.88rem;
+    color:#bbb;
+    max-width:380px;
+    margin-bottom:46px;
+    line-height:1.7;
+  }
+  .vault{
+    width:180px;height:180px;
+    border-radius:16px;
+    background:linear-gradient(145deg,#2b2b2b,#151515);
+    border:4px solid #444;
+    box-shadow:0 20px 50px rgba(0,0,0,.7), inset 0 0 20px rgba(0,0,0,.6);
+    position:relative;
+    cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .5s ease, box-shadow .5s ease;
+  }
+  .vault .dial{
+    width:80px;height:80px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #666, #1a1a1a 70%);
+    border:3px solid #ffd700;
+    box-shadow:0 0 18px rgba(255,215,0,.4);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem;
+    transition:transform .8s ease;
+  }
+  .vault.open{
+    transform:scale(1.05) rotate(-1deg);
+    box-shadow:0 0 50px rgba(57,255,20,.5), inset 0 0 20px rgba(0,0,0,.6);
+  }
+  .vault.open .dial{
+    transform:rotate(360deg);
+    border-color:#39ff14;
+    box-shadow:0 0 25px rgba(57,255,20,.6);
+  }
+  .vault-hint{
+    margin-top:22px;
+    font-family:'Permanent Marker',cursive;
+    font-size:.85rem;
+    color:#ffd700;
+    animation:bob 1.8s ease-in-out infinite;
+  }
+  .vault.open ~ .vault-hint{opacity:0;}
+
+  /* ---------- LETTER (street style card) ---------- */
+  .note-card{
+    max-width:560px;
+    background:#111;
+    border:3px solid #39ff14;
+    border-radius:14px;
+    padding:40px 30px;
+    box-shadow:0 0 40px rgba(57,255,20,.25);
+    opacity:0;
+    transform:translateY(20px);
+    transition:opacity .9s ease, transform .9s ease;
+    position:relative;
+  }
+  .note-card.show{opacity:1;transform:translateY(0);}
+  .note-card .stamp{
+    position:absolute;top:-18px;right:20px;
+    font-family:'Permanent Marker',cursive;
+    background:#ff1744;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:6px;
+    font-size:.78rem;
+    transform:rotate(6deg);
+    box-shadow:0 6px 14px rgba(0,0,0,.4);
+  }
+  .note-card .to{
+    font-family:'Bungee',cursive;
+    font-size:1.3rem;
+    color:#ffd700;
+    margin-bottom:18px;
+  }
+  .note-card p{
+    font-size:1rem;
+    line-height:1.95;
+    color:#eee;
+    margin-bottom:12px;
+    opacity:0;
+    transform:translateY(8px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .note-card p.show{opacity:1;transform:translateY(0);}
+  .note-card .sign{
+    margin-top:18px;
+    font-family:'Permanent Marker',cursive;
+    font-size:1.2rem;
+    color:#39ff14;
+    text-shadow:0 0 10px rgba(57,255,20,.5);
+  }
+
+  /* ---------- FINAL ---------- */
+  .final-heading{
+    font-family:'Bungee',cursive;
+    font-size:clamp(1.4rem,4vw,1.9rem);
+    color:#fff;
+    text-shadow:2px 2px 0 #39ff14;
+    margin-bottom:14px;
+  }
+  .final-note{
+    font-size:.85rem;
+    color:#bbb;
+    max-width:360px;
+    margin-bottom:36px;
+  }
+  .fire-btn{
+    background:none;border:none;cursor:pointer;
+    font-size:2.6rem;
+    filter:drop-shadow(0 0 16px rgba(255,100,20,.7));
+    animation:pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.14);}}
+  .final-msg{
+    max-width:480px;
+    margin-top:30px;
+    opacity:0;
+    transform:translateY(14px) scale(.97);
+    transition:opacity .9s ease, transform .9s ease;
+  }
+  .final-msg.show{opacity:1;transform:translateY(0) scale(1);}
+  .final-msg p{
+    font-size:1rem;
+    line-height:1.9;
+    color:#f0f0f0;
+    margin-bottom:10px;
+  }
+  .final-msg .dedication{
+    margin-top:22px;
+    font-family:'Bungee',cursive;
+    font-size:1.4rem;
+    color:#ffd700;
+    text-shadow:2px 2px 0 #ff1744;
+  }
+  .final-msg .dedication small{
+    display:block;
+    font-family:'Poppins',sans-serif;
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#39ff14;
+    margin-top:8px;
+  }
+
+  .spark{
+    position:fixed;top:-20px;
+    font-size:1.1rem;
+    pointer-events:none;
+    animation:fallSpark linear forwards;
+    z-index:10;
+  }
+  @keyframes fallSpark{
+    to{transform:translateY(110vh) rotate(300deg);opacity:0;}
+  }
+
+  footer{
+    text-align:center;padding:24px 20px 60px;
+    font-family:'Permanent Marker',cursive;
+    font-size:.75rem;letter-spacing:.1em;
+    color:#444;position:relative;z-index:1;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001s !important; animation-iteration-count:1 !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="spray"></div>
+
+<!-- HERO -->
+<section>
+  <div class="flames" id="flames"></div>
+  <div class="crown">👑</div>
+  <div class="tag">#RealOnesOnly</div>
+  <h1>YO<br><span>HASSAN</span></h1>
+  <p class="hero-sub">Tough se tough banda bhi, ek narm dil rakhta hai —<br>aur yeh sare game, sirf tumhare naam hai.</p>
+  <div class="chain-row">⛓️ 🔥 ⛓️</div>
+  <div class="scroll-cue">▼ SCROLL DOWN ▼</div>
+</section>
+
+<!-- VAULT -->
+<section>
+  <div class="vault-heading">🔒 LOCKED FOR YOU</div>
+  <p class="vault-note">Yeh vault sirf ek banday ke liye khulta hai. Tap karo, Hassan.</p>
+  <div class="vault" id="vault">
+    <div class="dial">🔐</div>
+  </div>
+  <div class="vault-hint">TAP TO CRACK IT OPEN</div>
+</section>
+
+<!-- NOTE -->
+<section>
+  <div class="note-card" id="noteCard">
+    <div class="stamp">TOP SECRET</div>
+    <div class="to">Real Talk, Hassan —</div>
+    <p>Bahar se chahe jitna tough dikhao, main jaanti hoon tumharay andar kitna soft dil hai — aur wahi dil mujhe sab se zyada pyara lagta hai, sab ki care karna, dil may ehsas rakhna, madad krna, or sab sy bhar kar moja chana .</p>
+    <p>Duniya tumhe jaise bhi jaane, mere liye tum hamesha meri sabse mehfooz jaga ho main tumhary sath comfortable rati hu is liyia khul kay har tara ki bat bina kuch sochy samjy kr dati hu .</p>
+    <p>ya bat toh sach hia, tuma ab ma apna kha sakti hu or chati be yahi hu ap mary ho jayia, dil ne apna faisla kar liya hai. Yeh sirf tumhare naam likha hai.</p>
+    <div class="sign">— your girl, your biggest flex ❤️🔥</div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section>
+  <div class="final-heading">ONE LAST THING 🔥</div>
+  <p class="final-note">Fire pe tap karo — ek aakhri baat reh gayi hai kehne ko.</p>
+  <button class="fire-btn" id="fireBtn">🔥</button>
+  <div class="final-msg" id="finalMsg">
+    <p>Zindagi may kuch log atnay achy lag jaty hia, Hassan — jasay kay app .</p>
+    <p>App unhi mein se ho, hamesha.</p>
+    <div class="dedication">For KING HASSAN 👑❤️
+      <small>yours, always and forever</small>
+    </div>
+  </div>
+</section>
+
+<footer>MADE WITH LOVE, Fatima Awan ❤️</footer>
+
+<script>
+  // rising flames in hero
+  const flamesEl = document.getElementById('flames');
+  for(let i=0;i<10;i++){
+    const f=document.createElement('div');
+    f.className='flame-p';
+    f.textContent='🔥';
+    f.style.left=Math.random()*100+'%';
+    f.style.animationDuration=(4+Math.random()*4)+'s';
+    f.style.animationDelay=(Math.random()*5)+'s';
+    f.style.fontSize=(1+Math.random()*0.8)+'rem';
+    flamesEl.appendChild(f);
+  }
+
+  // vault open
+  const vault = document.getElementById('vault');
+  const noteCard = document.getElementById('noteCard');
+  vault.addEventListener('click', ()=>{
+    if(vault.classList.contains('open')) return;
+    vault.classList.add('open');
+    setTimeout(async ()=>{
+      noteCard.classList.add('show');
+      const paras = noteCard.querySelectorAll('p');
+      for(const p of paras){
+        p.classList.add('show');
+        await wait(750);
+      }
+    }, 600);
+    noteCard.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  function wait(ms){ return new Promise(r=>setTimeout(r,ms)); }
+
+  // final fire button
+  document.getElementById('fireBtn').addEventListener('click', function(){
+    document.getElementById('finalMsg').classList.add('show');
+    this.style.opacity='.4';
+    for(let i=0;i<20;i++){
+      const s = document.createElement('div');
+      s.className='spark';
+      s.textContent = i%3===0 ? '🔥' : (i%3===1 ? '⚡' : '💚');
+      s.style.left = Math.random()*100+'vw';
+      s.style.animationDuration = (2.3+Math.random()*2)+'s';
+      s.style.fontSize = (0.9+Math.random()*0.9)+'rem';
+      document.body.appendChild(s);
+      setTimeout(()=>s.remove(), 5000);
+    }
+  });
+</script>
+
+</body>
+</html>
